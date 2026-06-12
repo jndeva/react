@@ -1,12 +1,12 @@
-function App({ notes }) {
+import Note from "./Note"
+
+const App = ({ notes }) => {
   return (
     <>
       <h1>Notes</h1>
       <ul>
         {notes.map(note =>
-          <li key={note.id}>
-            {note.content}
-          </li>
+          <Note key={note.id} note={note} />
         )}
       </ul>
     </>
